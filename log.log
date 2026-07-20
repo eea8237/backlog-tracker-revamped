@@ -1,0 +1,23 @@
+7/20/26
+ig we're doing this again
+let's recreate the shit from the java version
+
+or wait a minute
+this is the planning stage
+ig we plan
+
+what should users do here
+there should be profiles maybe? a way for users to like. actually add things to the vacklog
+
+// planning
+backlog items have names, medium(s) they're in, series they're in, whether or not the item is complete (for each medium?), and whether or not the item is currently owned. along with maybe an optional description/notes section. should probably also contain an id.
+
+backlogs contain items, can be sorted/filtered by all of the above categories. if a category doesn't contain any items it isn't displayed. 
+
+mediums are probably an enum or something. same with section i don't see that changing much.
+
+the user should be able to add items to the backlog using like. a form or something. with a submit button. they add in the information for an item into a bunch of text fields, which is used to create an Item and placed into the backlog when the add button is clicked. could also use checkboxes for the boolean variables.
+the user should be able to see the items they have added. maybe each name / medium / whatever is in like. a list of cards. then the user can select a card to view/edit/remove that item. items should be displayed by order added by default. then can add filters or change the order of what's displayed. completed items should look different. maybe items belonging to different sections should look different.
+the user should be able to remove items from the backlog. using the above method. remove by id internally probably.
+the user should be able to edit items. using id somehow. bring up the same form as creating an item, only already filled with the item's information. saving this info changes the item info.
+the user's backlog should be saved and restored for that user methinks. saved into like. a database. or a file. a database saved to a file?
