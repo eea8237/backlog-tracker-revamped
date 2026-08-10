@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BacklogClient/BacklogClient.csproj" />
+  <Project Path="BacklogServer/BacklogServer.csproj" />
+</Solution>
