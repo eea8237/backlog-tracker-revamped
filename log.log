@@ -21,3 +21,9 @@ the user should be able to see the items they have added. maybe each name / medi
 the user should be able to remove items from the backlog. using the above method. remove by id internally probably.
 the user should be able to edit items. using id somehow. bring up the same form as creating an item, only already filled with the item's information. saving this info changes the item info.
 the user's backlog should be saved and restored for that user methinks. saved into like. a database. or a file. a database saved to a file?
+
+// more planning
+will store things in mysql database
+    - table for backlogs
+    - table for items, maybe?
+    - table for users i think
