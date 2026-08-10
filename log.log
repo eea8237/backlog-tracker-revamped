@@ -27,3 +27,8 @@ will store things in mysql database
     - table for backlogs
     - table for items, maybe?
     - table for users i think
+
+// 8/10/2026
+- starting with the model ig. server model?
+    - we're putting it in shared since it will probably be shared
+    - going to recreate what i had for the java version of this
