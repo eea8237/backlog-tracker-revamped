@@ -32,3 +32,6 @@ will store things in mysql database
 - starting with the model ig. server model?
     - we're putting it in shared since it will probably be shared
     - going to recreate what i had for the java version of this
+
+// 8/12/26
+i added some testing stuff for later. added some methods for getting specific things from the backlog.

@@ -18,12 +18,12 @@ namespace Shared.Models
         /// <summary>
         /// id for identifying user the backlog belongs to
         /// </summary>
-        private readonly int _userId;
+        private required readonly int _userId;
         /// <summary>
         /// Backlog ID. Just in case.
         /// used to differentiate between the backlogs owned by a user
         /// </summary>
-        private readonly int _backlogId;
+        private required readonly int _backlogId;
 
         /// <summary>
         /// name for the backlog?
@@ -87,7 +87,37 @@ namespace Shared.Models
                 $"\tItems: {itemNames}";
         }
 
+        public BacklogItem GetByName(string name)
+        {
+            return Items.FirstOrDefault(i => i.Name == name);
+        }
+        public BacklogItem GetById(int id)
+        {
+            return Items.FirstOrDefault(i => i.ItemId == id);
+        }
+        public List<BacklogItem> GetByMedium(string medium)
+        {
+            return Items.FindAll(i => i.Medium == medium);
+        }
 
+        public List<BacklogItem> GetBySeries(string series)
+        {
+            return Items.FindAll(i => i.Series == series);
+        }
 
+        public List<BacklogItem> GetByCompletion(bool isComplete)
+        {
+            return Items.FindAll(i => i.IsComplete == isComplete);
+        }
+
+        public List<BacklogItem> GetByOwnership(bool isOwned)
+        {
+            return Items.FindAll(i => i.isOwned == isOwned);
+        }
+
+        public List<BacklogItem> GetByProgression(bool inProgress)
+        {
+            return Items.FindAll(i => i.inProgress == inProgress);
+        }
     }
 }

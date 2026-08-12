@@ -10,7 +10,7 @@ namespace Shared.Models
     */
     public class BacklogItem
     {
-        private readonly int _itemId;
+        private required readonly int _itemId;
         private string _name;
         private string _medium; // items belonging to different mediums can both be added
         private string _series;
