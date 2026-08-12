@@ -35,3 +35,5 @@ will store things in mysql database
 
 // 8/12/26
 i added some testing stuff for later. added some methods for getting specific things from the backlog.
+
+note to self look up how to integrate a database into a project
