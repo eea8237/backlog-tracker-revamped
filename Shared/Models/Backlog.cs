@@ -18,12 +18,12 @@ namespace Shared.Models
         /// <summary>
         /// id for identifying user the backlog belongs to
         /// </summary>
-        private required readonly int _userId;
+        private readonly int _userId;
         /// <summary>
         /// Backlog ID. Just in case.
         /// used to differentiate between the backlogs owned by a user
         /// </summary>
-        private required readonly int _backlogId;
+        private readonly int _backlogId;
 
         /// <summary>
         /// name for the backlog?
@@ -36,17 +36,20 @@ namespace Shared.Models
 
         public List<BacklogItem> Items
         {
-            get {return _items;}
+            get => _items;
+            init => new List<BacklogItem>();
         }
 
         public int UserId
         {
             get => _userId;
+            init => _userId = value;
         }
 
         public int BacklogId
         {
             get => _backlogId;
+            init => _backlogId = value;
         }
 
         /// <summary>
@@ -57,13 +60,13 @@ namespace Shared.Models
         /// <param name="items">List of items the backlog contains.</param>
         /// <param name="userId">ID of user who owns backlog.</param>
         /// <param name="backlogId">ID for backlog</param>
-        public Backlog(string name, List<Item> items, int userId, int backlogId)
-        {
-            _name = name;  // this is the only thing explicitly provided by the user
-            _userId = userId;
-            _backlogId = backlogId;
-            _items = items;
-        }
+        // public Backlog(string name, List<BacklogItem> items, int userId, int backlogId)
+        // {
+        //     _name = name;  // this is the only thing explicitly provided by the user
+        //     _userId = userId;
+        //     _backlogId = backlogId;
+        //     _items = items;
+        // }
 
         /// <summary>
         /// Initialize an empty backlog.
@@ -71,10 +74,10 @@ namespace Shared.Models
         /// <param name="name">Name of the backlog</param>
         /// <param name="userId">ID of user who owns backlog.</param>
         /// <param name="backlogId">ID for backlog</param>
-        public Backlog(string name, int userId, int backlogId)
-        {
-            this(name, new List<BacklogItem>(), userId, backlogId);
-        }
+        // public Backlog(string name, int userId, int backlogId)
+        // {
+        //     this(name, new List<BacklogItem>(), userId, backlogId);
+        // }
 
         public override string ToString()
         {
@@ -112,12 +115,12 @@ namespace Shared.Models
 
         public List<BacklogItem> GetByOwnership(bool isOwned)
         {
-            return Items.FindAll(i => i.isOwned == isOwned);
+            return Items.FindAll(i => i.IsOwned == isOwned);
         }
 
         public List<BacklogItem> GetByProgression(bool inProgress)
         {
-            return Items.FindAll(i => i.inProgress == inProgress);
+            return Items.FindAll(i => i.InProgress == inProgress);
         }
     }
 }
