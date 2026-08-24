@@ -1,0 +1,80 @@
+@page "/backlogs/{backlogId:int}/add-item"
+@using Shared.Models
+@inject NavigationManager NavManager
+@inject Shared.Services.BacklogService BacklogService
+
+@code
+{
+    
+    private int userId = 1;
+    private int itemId = 1;
+
+    [Parameter]
+    private int backlogId {get; set;}
+    private Backlog backlog;
+
+    [SupplyParameterFromForm]
+    private BacklogItem backlogItem {get; set;} = new BacklogItem() 
+    {
+        ItemId=itemId,
+    };
+    private bool isSubmitted = false;
+
+    protected override void OnParametersSet()
+    {
+        backlog = BacklogService.GetBacklog(backlogId);
+        if (backlog is null) NavManager.NavigateTo("/not-found");
+    }
+    private void HandleSubmit()
+    {
+        backlog.Items.Add(backlogItem);
+        Console.WriteLine($"Added item to {backlog.Name}: {item}");
+        itemId = new BacklogItem() {ItemId = itemId};
+        itemId++;
+        isSubmitted = true;
+    }
+}
+
+<EditForm Model=@backlogItem OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <h2>Add an item to the backlog</h2>
+    <div>
+        <p>UserID: @userId</p>
+    </div>
+    <div>
+        <p>BacklogID: @backlogId</p>
+    </div>
+    <div>
+        <p>ItemID: @itemId</p>
+    </div>
+    <div>
+        <label for="name">Name:</label>
+        <InputText id="name" @bind="backlogItem.Name" />
+    </div>
+    <div>
+        <label for="medium">Medium:</label>
+        <InputText id="medium" @bind="backlogItem.Medium" />
+    </div>
+    <div>
+        <label for="series">Series:</label>
+        <InputText id="series" @bind="backlogItem.Series" />
+    </div>
+    <div>
+        <label for="completed">Completed</label>
+        <InputCheckbox id="completed" @bind="backlogItem.IsComplete" />
+    </div>
+    <div>
+        <label for="owned">Owned</label>
+        <InputCheckbox id="owned" @bind="backlogItem.IsOwned" />
+    </div>
+    <div>
+        <label for="inProgress">In Progress</label>
+        <InputCheckbox id="inProgress" @bind="backlogItem.InProgress" />
+    </div>
+    <div>
+        <label for="notes">Notes:</label>
+        <InputTextArea id="notes" @bind="backlogItem.Notes" />
+    </div>
+    <button type="submit">Submit</button>
+</EditForm>

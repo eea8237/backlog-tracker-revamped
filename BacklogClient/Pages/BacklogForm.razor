@@ -1,0 +1,46 @@
+@page "/backlogs/new"
+@using Shared.Models
+@inject Shared.Services.BacklogService BacklogService
+
+@code
+{
+    
+    private int userId = 1;
+
+    [SupplyParameterFromForm]
+    private Backlog backlog {get; set;} = new Backlog() 
+    {
+        UserId=userId,
+        BacklogID=BacklogService.NextId
+    };
+    private bool isSubmitted = false;
+
+    private void HandleSubmit()
+    {
+        BacklogService.AddBacklog(backlog);
+        Console.WriteLine($"Added backlog: {backlog}");
+        backlog = new Backlog()
+        {
+            UserId = userId,
+            BacklogId = BacklogService.NextId
+        };
+        isSubmitted = true;
+    }
+}
+
+<EditForm Model=@backlog OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <h1>Create a new backlog</h1>
+    <div>
+        <p>UserID: @userId</p>
+    </div>
+    <div>
+        <p>BacklogID: @BacklogService.NextId</p>
+    </div>
+    <div>
+        <label for="name">Name:</label>
+        <InputText id="name" @bind="backlog.Name" />
+    </div>
+    <button type="submit">Submit</button>
+</EditForm>
