@@ -14,7 +14,7 @@ namespace Shared.Models
         /// <summary>
         /// items the backlog contains
         /// </summary>
-        private List<BacklogItem> _items; // considering how these things are sorted shouldn't this be a dictionary
+        private List<BacklogItem> _items = new List<BacklogItem>(); // considering how these things are sorted shouldn't this be a dictionary
         /// <summary>
         /// id for identifying user the backlog belongs to
         /// </summary>
@@ -37,7 +37,7 @@ namespace Shared.Models
         public List<BacklogItem> Items
         {
             get => _items;
-            init => new List<BacklogItem>();
+            init => _items = new List<BacklogItem>();
         }
 
         public int UserId
@@ -78,23 +78,26 @@ namespace Shared.Models
         // {
         //     this(name, new List<BacklogItem>(), userId, backlogId);
         // }
-
-        public override string ToString()
+        public static List<string> GetItemNames(List<BacklogItem> items)
         {
             var itemNames = new List<string>();
-            foreach (var item in Items) itemNames.Add(item.Name);
+            if (items != null) foreach (var item in items) itemNames.Add(item.Name);
+            return itemNames;
+        } 
+        public override string ToString()
+        {
             return "Backlog:\n" +
                 $"\tUserID: {UserId}\n" +
                 $"\tBacklogID: {BacklogId}\n" +
                 $"\tName: {Name}\n" +
-                $"\tItems: {itemNames}";
+                $"\tItems: {string.Join(", ", GetItemNames(Items))}";
         }
 
-        public BacklogItem GetByName(string name)
+        public BacklogItem? GetByName(string name)
         {
             return Items.FirstOrDefault(i => i.Name == name);
         }
-        public BacklogItem GetById(int id)
+        public BacklogItem? GetById(int id)
         {
             return Items.FirstOrDefault(i => i.ItemId == id);
         }
@@ -122,5 +125,27 @@ namespace Shared.Models
         {
             return Items.FindAll(i => i.InProgress == inProgress);
         }
+
+        // add method for getting all the mediums/series in a backlog
+        public HashSet<string> GetMediums()
+        {
+            var mediums = new HashSet<string>();
+            foreach (var item in Items)
+            {
+                if (!mediums.Contains(item.Medium)) mediums.Add(item.Medium);
+            }
+            return mediums;
+        }
+
+        public HashSet<string> GetSeries()
+        {
+            var series = new HashSet<string>();
+            foreach (var item in Items)
+            {
+                if (!series.Contains(item.Series)) series.Add(item.Series);
+            }
+            return series;
+        }
+        // add method for counting how much belongs to each sorting category?
     }
 }
