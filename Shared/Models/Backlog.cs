@@ -37,7 +37,7 @@ namespace Shared.Models
         public List<BacklogItem> Items
         {
             get => _items;
-            init => _items = new List<BacklogItem>();
+            set => _items = value;
         }
 
         public int UserId

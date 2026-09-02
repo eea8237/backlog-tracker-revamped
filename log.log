@@ -44,3 +44,8 @@ note to self look up how to integrate a database into a project
     - need to implement a proper interface for viewing backlogs
     - also need to update backlog service so that it adds/removes items from a database instead of a list
 - added manual testing in main for the Backlog model and items
+
+// 9/1/26
+- will try to work on db a little more?
+- should probably try one of those service testing things...?
+    - create an interface for backlog service, implement the backlog services for testing?

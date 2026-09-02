@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Shared.Models
 {
-    public class BacklogDbContext : DbContext
+    public class BacklogAppDbContext : DbContext
     {
         // these are set to test values for the time being
         private const string dbUser = "root";
