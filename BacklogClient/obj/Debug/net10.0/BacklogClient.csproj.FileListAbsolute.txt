@@ -1,0 +1,9 @@
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\EmbeddedAttribute.cs
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\ValidatableTypeAttribute.cs
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.csproj.AssemblyReference.cache
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.AssemblyInfoInputs.cache
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.AssemblyInfo.cs
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.csproj.CoreCompileInputs.cache
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.MvcApplicationPartsAssemblyInfo.cache

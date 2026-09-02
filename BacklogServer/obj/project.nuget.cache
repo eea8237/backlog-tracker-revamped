@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "S7hl1ZKR888=",
-  "success": false,
+  "dgSpecHash": "n28rXnx7lw8=",
+  "success": true,
   "projectFilePath": "C:\\Users\\litte\\Desktop\\csec projects\\backlog-tracker-revamped\\BacklogServer\\BacklogServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\litte\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -16,6 +16,7 @@
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.11\\microsoft.entityframeworkcore.abstractions.10.0.11.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\10.0.11\\microsoft.entityframeworkcore.analyzers.10.0.11.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.entityframeworkcore.design\\10.0.11\\microsoft.entityframeworkcore.design.10.0.11.nupkg.sha512",
+    "C:\\Users\\litte\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.11\\microsoft.entityframeworkcore.relational.10.0.11.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.11\\microsoft.entityframeworkcore.tools.10.0.11.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.11\\microsoft.extensions.dependencymodel.10.0.11.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.visualstudio.solutionpersistence\\1.0.52\\microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512",
@@ -33,10 +34,11 @@
   ],
   "logs": [
     {
-      "code": "NU1107",
-      "level": "Error",
-      "message": "Version conflict detected for Microsoft.EntityFrameworkCore.Relational. Install/reference Microsoft.EntityFrameworkCore.Relational 10.0.11 directly to project BacklogServer to resolve this issue. \r\n BacklogServer -> Microsoft.EntityFrameworkCore.Tools 10.0.11 -> Microsoft.EntityFrameworkCore.Design 10.0.11 -> Microsoft.EntityFrameworkCore.Relational (>= 10.0.11) \r\n BacklogServer -> Pomelo.EntityFrameworkCore.MySql 9.0.0 -> Microsoft.EntityFrameworkCore.Relational (>= 9.0.0 && <= 9.0.999).",
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Detected package version outside of dependency constraint: Pomelo.EntityFrameworkCore.MySql 9.0.0 requires Microsoft.EntityFrameworkCore.Relational (>= 9.0.0 && <= 9.0.999) but version Microsoft.EntityFrameworkCore.Relational 10.0.11 was resolved.",
       "projectPath": "C:\\Users\\litte\\Desktop\\csec projects\\backlog-tracker-revamped\\BacklogServer\\BacklogServer.csproj",
+      "warningLevel": 1,
       "filePath": "C:\\Users\\litte\\Desktop\\csec projects\\backlog-tracker-revamped\\BacklogServer\\BacklogServer.csproj",
       "libraryId": "Microsoft.EntityFrameworkCore.Relational",
       "targetGraphs": [

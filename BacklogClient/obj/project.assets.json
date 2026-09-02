@@ -2,6 +2,57 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "Blazor.LocalStorage/10.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Blazor.Serialization": "10.1.0",
+          "Microsoft.Extensions.DependencyInjection": "10.0.0",
+          "Microsoft.Extensions.Primitives": "10.0.0",
+          "Microsoft.JSInterop": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Blazor.LocalStorage.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.LocalStorage.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Blazor.Serialization/10.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Blazor.Serialization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.Serialization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Blazor.SessionStorage/10.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Blazor.Serialization": "10.1.0",
+          "Microsoft.Extensions.DependencyInjection": "10.0.0",
+          "Microsoft.Extensions.Primitives": "10.0.0",
+          "Microsoft.JSInterop": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Blazor.SessionStorage.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.SessionStorage.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.App.Internal.Assets/10.0.2": {
         "type": "package",
         "build": {
@@ -692,6 +743,57 @@
       }
     },
     "net10.0/browser-wasm": {
+      "Blazor.LocalStorage/10.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Blazor.Serialization": "10.1.0",
+          "Microsoft.Extensions.DependencyInjection": "10.0.0",
+          "Microsoft.Extensions.Primitives": "10.0.0",
+          "Microsoft.JSInterop": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Blazor.LocalStorage.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.LocalStorage.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Blazor.Serialization/10.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Blazor.Serialization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.Serialization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Blazor.SessionStorage/10.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Blazor.Serialization": "10.1.0",
+          "Microsoft.Extensions.DependencyInjection": "10.0.0",
+          "Microsoft.Extensions.Primitives": "10.0.0",
+          "Microsoft.JSInterop": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Blazor.SessionStorage.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.SessionStorage.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.App.Internal.Assets/10.0.2": {
         "type": "package",
         "build": {
@@ -1383,6 +1485,66 @@
     }
   },
   "libraries": {
+    "Blazor.LocalStorage/10.1.0": {
+      "sha512": "zNMd04IHqr58kgcO59u8Wg5WzQ2FWXb8HMwXNdotKcWRkwdFk9reHxVYwEM+oy/pR84JGOnQHntsAjf5CRiptA==",
+      "type": "package",
+      "path": "blazor.localstorage/10.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "blazor.localstorage.10.1.0.nupkg.sha512",
+        "blazor.localstorage.nuspec",
+        "lib/net10.0/Blazor.LocalStorage.dll",
+        "lib/net10.0/Blazor.LocalStorage.xml",
+        "lib/net8.0/Blazor.LocalStorage.dll",
+        "lib/net8.0/Blazor.LocalStorage.xml",
+        "lib/net9.0/Blazor.LocalStorage.dll",
+        "lib/net9.0/Blazor.LocalStorage.xml",
+        "logo.png"
+      ]
+    },
+    "Blazor.Serialization/10.1.0": {
+      "sha512": "9WrypLtmJ1QMBFZAsQzXQrIcpXT2HvLkt3IGeYi0HHUYT3FvhBbTigbNe2tVdhYWxsfuvg4MW+B+rfdFPanBtQ==",
+      "type": "package",
+      "path": "blazor.serialization/10.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "blazor.serialization.10.1.0.nupkg.sha512",
+        "blazor.serialization.nuspec",
+        "lib/net10.0/Blazor.Serialization.dll",
+        "lib/net10.0/Blazor.Serialization.xml",
+        "lib/net8.0/Blazor.Serialization.dll",
+        "lib/net8.0/Blazor.Serialization.xml",
+        "lib/net9.0/Blazor.Serialization.dll",
+        "lib/net9.0/Blazor.Serialization.xml",
+        "logo.png"
+      ]
+    },
+    "Blazor.SessionStorage/10.1.0": {
+      "sha512": "fuAqn5m003Ogjqky2TSE5TzfFT3iwkuR0yOYpzAGbU8PQZtQB+avRKky1LJDqx7uUme+wsINVYFi7KD732LAmA==",
+      "type": "package",
+      "path": "blazor.sessionstorage/10.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "blazor.sessionstorage.10.1.0.nupkg.sha512",
+        "blazor.sessionstorage.nuspec",
+        "lib/net10.0/Blazor.SessionStorage.dll",
+        "lib/net10.0/Blazor.SessionStorage.xml",
+        "lib/net8.0/Blazor.SessionStorage.dll",
+        "lib/net8.0/Blazor.SessionStorage.xml",
+        "lib/net9.0/Blazor.SessionStorage.dll",
+        "lib/net9.0/Blazor.SessionStorage.xml",
+        "logo.png"
+      ]
+    },
     "Microsoft.AspNetCore.App.Internal.Assets/10.0.2": {
       "sha512": "fMAqrUm+aspxRAsCJ6Hlgs96XSHwNIr9HBNt7wyBAzQkPlfE7w+0C4NzDoJnso5YZyDI0VcRtEXxG9odt3KiZA==",
       "type": "package",
@@ -2590,6 +2752,8 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Blazor.LocalStorage >= 10.1.0",
+      "Blazor.SessionStorage >= 10.1.0",
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.2",
       "Microsoft.AspNetCore.Components.WebAssembly >= 10.0.2",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 10.0.2",
@@ -2654,6 +2818,14 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Blazor.LocalStorage": {
+            "target": "Package",
+            "version": "[10.1.0, )"
+          },
+          "Blazor.SessionStorage": {
+            "target": "Package",
+            "version": "[10.1.0, )"
+          },
           "Microsoft.AspNetCore.App.Internal.Assets": {
             "suppressParent": "All",
             "target": "Package",

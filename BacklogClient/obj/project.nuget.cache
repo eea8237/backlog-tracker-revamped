@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hNclPhXiwaA=",
+  "dgSpecHash": "chWcRr0FdP0=",
   "success": true,
   "projectFilePath": "C:\\Users\\litte\\Desktop\\csec projects\\backlog-tracker-revamped\\BacklogClient\\BacklogClient.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\litte\\.nuget\\packages\\blazor.localstorage\\10.1.0\\blazor.localstorage.10.1.0.nupkg.sha512",
+    "C:\\Users\\litte\\.nuget\\packages\\blazor.serialization\\10.1.0\\blazor.serialization.10.1.0.nupkg.sha512",
+    "C:\\Users\\litte\\.nuget\\packages\\blazor.sessionstorage\\10.1.0\\blazor.sessionstorage.10.1.0.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.2\\microsoft.aspnetcore.app.internal.assets.10.0.2.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.2\\microsoft.aspnetcore.authorization.10.0.2.nupkg.sha512",
     "C:\\Users\\litte\\.nuget\\packages\\microsoft.aspnetcore.components\\10.0.2\\microsoft.aspnetcore.components.10.0.2.nupkg.sha512",

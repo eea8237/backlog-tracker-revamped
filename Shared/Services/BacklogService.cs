@@ -10,13 +10,22 @@ namespace Shared.Services
     {
         private List<Backlog> _backlogs;
 
+        private BacklogDbContext _backlogDbContext = new BacklogDbContext();
+        private int _nextID = 1;
+
+        public int NextID {get;}
+
         public List<Backlog> Backlogs
         {
             get => new(_backlogs);
             init => _backlogs = new List<Backlog>();
         }
 
-        public void AddBacklog(Backlog backlog) => _backlogs.Add(backlog);
+        public void AddBacklog(Backlog backlog) 
+        {
+            _backlogs.Add(backlog);
+            _nextID++;
+        }
 
         public void RemoveBacklog(int backlogId)
         {
