@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BacklogServer.Repositories;
 using Shared.Models;
 
-namespace Shared.Services
+namespace BacklogServer.Services
 {
-    public class BacklogService : IBacklogService
+    /// <summary>
+    /// Service for managing backlog business logic.
+    /// </summary>
+    public class BacklogService
     {
+        private IBacklogRepository _backlogRepository;
+
         private List<Backlog> _backlogs;
         private int _nextID = 1;
 
@@ -19,14 +25,19 @@ namespace Shared.Services
             init => _backlogs = new List<Backlog>();
         }
 
+        public BacklogService(IBacklogRepository backlogRepository)
+        {
+            _backlogRepository = backlogRepository;
+        }
+
         public void AddBacklog(Backlog backlog) 
         {
-            _backlogs.Add(backlog);
+            _backlogRepository.AddBacklog(backlog);
             _nextID++;
         }
         public async Task AddBacklogAsync(Backlog backlog) 
         {
-            _backlogs.Add(backlog);
+            await _backlogRepository.AddBacklogAsync(backlog);
             _nextID++;
         }
 
@@ -35,7 +46,8 @@ namespace Shared.Services
             Backlog? backlog = null;
             try
             {
-                backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
+                backlog = _backlogRepository.GetBacklog(backlogId);
+                // backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
                 if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
@@ -50,7 +62,8 @@ namespace Shared.Services
             Backlog? backlog = null;
             try
             {
-                backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
+                backlog = await _backlogRepository.GetBacklogAsync(backlogId);
+                // backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
                 if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
@@ -60,16 +73,23 @@ namespace Shared.Services
             return backlog;
         }
 
-        public List<Backlog>? GetBacklogs() => Backlogs;
-        public async Task<List<Backlog>?> GetBacklogsAsync() => Backlogs;
+        public List<Backlog>? GetBacklogs()
+        {
+            return _backlogRepository.GetBacklogs();
+        }
+        public async Task<List<Backlog>?> GetBacklogsAsync() 
+        {
+            return await _backlogRepository.GetBacklogsAsync();
+        }
 
 
         public void RemoveBacklog(int backlogId)
         {
             try
             {
-                var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
+                _backlogRepository.RemoveBacklog(backlogId);
+                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
+                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
             {
@@ -80,8 +100,9 @@ namespace Shared.Services
         {
             try
             {
-                var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
+                await _backlogRepository.RemoveBacklogAsync(backlogId);
+                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
+                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
             {
@@ -94,9 +115,10 @@ namespace Shared.Services
         {
             try
             {
-                var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
-                backlog = updatedBacklog;
+                _backlogRepository.UpdateBacklog(backlogId, updatedBacklog);
+                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
+                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
+                // backlog = updatedBacklog;
             }
             catch (Exception e)
             {
@@ -107,9 +129,10 @@ namespace Shared.Services
         {
             try
             {
-                var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
-                backlog = updatedBacklog;
+                await _backlogRepository.UpdateBacklogAsync(backlogId, updatedBacklog);
+                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
+                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
+                // backlog = updatedBacklog;
             }
             catch (Exception e)
             {

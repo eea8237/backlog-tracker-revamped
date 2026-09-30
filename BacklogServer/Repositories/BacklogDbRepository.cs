@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 using Microsoft.EntityFrameworkCore;
 using Shared.Models;
+using BacklogServer.Models;
 
-namespace Shared.Services
+namespace BacklogServer.Repositories
 {
-    public class BacklogDbService : IBacklogService
+    public class BacklogDbRepository : IBacklogRepository
     {
         private List<Backlog> _backlogs;
 

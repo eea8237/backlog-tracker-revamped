@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-// using Shared.Models;
+using Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Shared.Models
+namespace BacklogServer.Models
 {
     public class BacklogAppDbContext : DbContext
     {

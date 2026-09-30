@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Shared.Models;
 
-namespace Shared.Services
+namespace BacklogServer.Repositories
 {
-    public interface IBacklogService
+    public interface IBacklogRepository
     {
         void AddBacklog(Backlog backlog);
         void RemoveBacklog(int backlogId);

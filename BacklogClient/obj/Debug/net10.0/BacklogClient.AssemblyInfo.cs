@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BacklogClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cb50adfad5e58fb1ab46771780599fec7f5da73")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f33a31364b9925304cb712adca6eb98fb4790b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BacklogClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BacklogClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

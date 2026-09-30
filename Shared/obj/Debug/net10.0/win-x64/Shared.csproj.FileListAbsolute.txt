@@ -293,6 +293,7 @@ C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\n
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\net10.0\win-x64\Shared.AssemblyInfoInputs.cache
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\net10.0\win-x64\Shared.AssemblyInfo.cs
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\net10.0\win-x64\Shared.csproj.CoreCompileInputs.cache
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\net10.0\win-x64\Shared.sourcelink.json
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\net10.0\win-x64\Shared.csproj.Up2Date
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\net10.0\win-x64\Shared.dll
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\Shared\obj\Debug\net10.0\win-x64\refint\Shared.dll

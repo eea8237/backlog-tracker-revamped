@@ -7,3 +7,4 @@ C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.AssemblyInfo.cs
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.csproj.CoreCompileInputs.cache
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogClient\obj\Debug\net10.0\BacklogClient.sourcelink.json
