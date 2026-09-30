@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BacklogServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f33a31364b9925304cb712adca6eb98fb4790b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe2d426740fb8a7e2538697141b8610ef57b75ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("BacklogServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BacklogServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4,3 +4,6 @@ BacklogClient/bin
 
 BacklogTest
 log.log
+
+BacklogServer/appsettings.Development.json
+BacklogClient/appsettings.Development.json
