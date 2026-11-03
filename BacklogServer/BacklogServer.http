@@ -1,0 +1,6 @@
+@BacklogServer_HostAddress = http://localhost:5093
+
+GET {{BacklogServer_HostAddress}}/
+Accept: application/json
+
+###

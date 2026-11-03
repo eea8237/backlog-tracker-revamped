@@ -453,3 +453,13 @@ C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\obj\
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\obj\Debug\net10.0\win-x64\BacklogServer.pdb
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\obj\Debug\net10.0\win-x64\BacklogServer.genruntimeconfig.cache
 C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\obj\Debug\net10.0\win-x64\ref\BacklogServer.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\Microsoft.Data.Sqlite.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\SQLitePCLRaw.batteries_v2.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\SQLitePCLRaw.core.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\e_sqlite3.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\obj\Debug\net10.0\win-x64\BacklogServer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\Microsoft.OpenApi.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\Swashbuckle.Swagger.dll
+C:\Users\litte\Desktop\csec projects\backlog-tracker-revamped\BacklogServer\bin\Debug\net10.0\win-x64\Swashbuckle.SwaggerUi.dll

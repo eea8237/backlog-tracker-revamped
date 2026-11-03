@@ -57,21 +57,43 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[10.0.11, )"
+              "version": "[10.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[10.0.11, )"
+              "version": "[10.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.11, )"
+              "version": "[10.0.14, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[3.11.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Swagger": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "SwaggerUi": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             }
           },
           "imports": [

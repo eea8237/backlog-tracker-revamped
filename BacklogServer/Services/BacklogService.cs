@@ -14,16 +14,10 @@ namespace BacklogServer.Services
     {
         private IBacklogRepository _backlogRepository;
 
-        private List<Backlog> _backlogs;
         private int _nextID = 1;
 
         public int NextID {get;}
 
-        public List<Backlog> Backlogs
-        {
-            get => new(_backlogs);
-            init => _backlogs = new List<Backlog>();
-        }
 
         public BacklogService(IBacklogRepository backlogRepository)
         {
@@ -47,7 +41,6 @@ namespace BacklogServer.Services
             try
             {
                 backlog = _backlogRepository.GetBacklog(backlogId);
-                // backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
                 if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
@@ -63,7 +56,6 @@ namespace BacklogServer.Services
             try
             {
                 backlog = await _backlogRepository.GetBacklogAsync(backlogId);
-                // backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
                 if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
@@ -88,8 +80,6 @@ namespace BacklogServer.Services
             try
             {
                 _backlogRepository.RemoveBacklog(backlogId);
-                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
             {
@@ -101,8 +91,6 @@ namespace BacklogServer.Services
             try
             {
                 await _backlogRepository.RemoveBacklogAsync(backlogId);
-                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
             }
             catch (Exception e)
             {
@@ -116,9 +104,6 @@ namespace BacklogServer.Services
             try
             {
                 _backlogRepository.UpdateBacklog(backlogId, updatedBacklog);
-                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
-                // backlog = updatedBacklog;
             }
             catch (Exception e)
             {
@@ -130,9 +115,6 @@ namespace BacklogServer.Services
             try
             {
                 await _backlogRepository.UpdateBacklogAsync(backlogId, updatedBacklog);
-                // var backlog = _backlogs.FirstOrDefault(b => b.BacklogId == backlogId, null);
-                // if (backlog == null) throw new IndexOutOfRangeException($"Backlog ID not found: {backlogId}");
-                // backlog = updatedBacklog;
             }
             catch (Exception e)
             {

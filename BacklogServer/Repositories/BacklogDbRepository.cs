@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 using Microsoft.EntityFrameworkCore;
 using Shared.Models;
-using BacklogServer.Models;
+using BacklogServer.Data;
 
 namespace BacklogServer.Repositories
 {
@@ -13,15 +13,21 @@ namespace BacklogServer.Repositories
     {
         private List<Backlog> _backlogs;
 
-        private BacklogAppDbContext _dbContext = new BacklogAppDbContext();
+        // private BacklogAppDbContext _dbContext = new BacklogAppDbContext();
+        private BacklogAppDbContext _dbContext;
         private int _nextID = 1;
 
         public int NextID {get;}
 
+        public BacklogDbRepository(BacklogAppDbContext dbContext)
+        {
+            _dbContext = dbContext;
+            _backlogs = new List<Backlog>();
+        }
+
         public List<Backlog> Backlogs
         {
             get => new(_backlogs);
-            init => _backlogs = new List<Backlog>();
         }
 
         public void AddBacklog(Backlog backlog) 
